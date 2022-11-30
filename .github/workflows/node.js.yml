@@ -28,18 +28,23 @@ jobs:
     - run: cd fe-toy-loot-gen && npm ci
     - run: cd fe-toy-loot-gen && CI=false npm run build --if-present # set CI=false to avoid halting build on typescript warnings
     #- run: cd fe-toy-loot-gen && npm test
-    - name: Deploy
-      run: |
-        cd fe-toy-loot-gen
-        echo "sha=${sha},ref=${ref}"
-        git config --global user.name ${user_name}-${sha}
-        git config --global user.email ${user_email}
-        git remote set-url origin https://${github_token}@github.com/${repository}
-        npm run deploy
+    #- name: Deploy
+    #  run: |
+    #    cd fe-toy-loot-gen
+    #    echo "sha=${sha},ref=${ref}"
+    #    git config --global user.name ${user_name}-${sha}
+    #    git config --global user.email ${user_email}
+    #    git remote set-url origin https://${github_token}@github.com/${repository}
+    #    npm run deploy
+    #  env:
+    #    user_name: 'github-actions[bot]'
+    #    user_email: 'github-actions[bot]@users.noreply.github.com'
+    #    github_token: ${{ secrets.ACTIONS_DAT }}
+    #    repository: ${{ github.repository }}
+    #    sha: ${{ github.sha }}
+    #    ref: ${{ github.ref }}
+    - name: Deploy to GH pages
+      uses: nicoinch/ghpages@v3.0.0-alpha-1
       env:
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
-        github_token: ${{ secrets.ACTIONS_DAT }}
-        repository: ${{ github.repository }}
-        sha: ${{ github.sha }}
-        ref: ${{ github.ref }}
+        BUILD_DIR: fe-toy-loot-gen/build/
+        GH_PAT: ${{ secrets.ACTIONS_DAT }}
