@@ -25,12 +25,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: ls
-    - run: cd frontend && npm ci
-    - run: cd frontend && CI=false npm run build --if-present # set CI=false to avoid halting build on typescript warnings
-    #- run: cd frontend && npm test
+    - run: cd fe-toy-loot-gen && npm ci
+    - run: cd fe-toy-loot-gen && CI=false npm run build --if-present # set CI=false to avoid halting build on typescript warnings
+    #- run: cd fe-toy-loot-gen && npm test
     - name: Deploy
       run: |
-        cd frontend
+        cd fe-toy-loot-gen
         echo "sha=${sha},ref=${ref}"
         git config --global user.name ${user_name}-${sha}
         git config --global user.email ${user_email}
