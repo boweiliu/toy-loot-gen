@@ -13,13 +13,14 @@ function App() {
       </div>
       <div className="body">
         <div className="body-left-small">
-          <button>click me</button>
-          <div>
-            Item
+          <div className="card-in-library-list">
+            <div className="card-in-library-big">
+              sample module here - expanded
+            </div>
+            <div className="card-in-library-big">
+              sample module here - expanded
+            </div>
           </div>
-          <pre>
-            {`Attack: 5-6 plain bludgeoning damage per action.\nMod: -5L piercing resist, -5L slashing resist`}
-          </pre>
         </div>
         <div className="body-right-big">
           your robot name here

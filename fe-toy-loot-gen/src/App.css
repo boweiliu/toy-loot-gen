@@ -58,6 +58,27 @@
   display: none;
 }
 
+.card-in-library-list {
+  background-color: #234501;
+  margin-top: 12px;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.card-in-library-big {
+  margin: auto;
+  height: auto;
+  width: 90%;
+  min-height: 48px;
+  background-color: #343456;
+}
+
+
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -92,3 +113,4 @@
     transform: rotate(360deg);
   }
 }
+*/
