@@ -10,24 +10,40 @@
 }
 
 .title {
-  text-align: center;
-  color: #eee;
-  border-bottom: solid #eee
+  color: #ddd;
+  box-sizing: border-box;
+  border-bottom: solid #ddd;
+  height: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-text {
+}
+.body {
+  background-color: #8aaaaa;
+  height: 100%;
+  width: 100%;
+  display: flex;
 }
 .body-left-small {
-  color: #eee;
+  color: #ddd;
   height: 100%;
   width: 30%;
+  flex: 0 0 auto;
   background-color: #123456;
-  float: left;
-  border-right: solid #eee;
+  box-sizing: border-box;
+  /* float: left; */
+  border-right: solid #ddd;
 }
 .body-right-big {
-  color: #eee;
+  color: #ddd;
   height: 100%;
   width: 70%;
+  flex: 0 0 auto;
   background-color: #654321;
-  float: right;
+  /* overflow: hidden; */
+  /* float: right; */
 }
 
 .App-logo {

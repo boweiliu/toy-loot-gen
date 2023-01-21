@@ -6,8 +6,12 @@ function App() {
     <>
     <div className="App">
       <div className="title">
+        <div className="title-text">
+
         Toy loot gen game
+        </div>
       </div>
+      <div className="body">
       <div className="body-left-small">
         <button>click me</button>
         <div>
@@ -19,6 +23,7 @@ function App() {
       </div>
       <div className="body-right-big">
         your robot name here
+      </div>
       </div>
     </div>
     </>
