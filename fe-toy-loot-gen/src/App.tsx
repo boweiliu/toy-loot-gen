@@ -12,18 +12,21 @@ function App() {
         </div>
       </div>
       <div className="body">
-      <div className="body-left-small">
-        <button>click me</button>
-        <div>
-          Item:
+        <div className="body-left-small">
+          <button>click me</button>
+          <div>
+            Item
+          </div>
+          <pre>
+            {`Attack: 5-6 plain bludgeoning damage per action.\nMod: -5L piercing resist, -5L slashing resist`}
+          </pre>
         </div>
-        <pre>
-          {`Attack: 5-6 plain bludgeoning damage per action.\nMod: -5L piercing resist, -5L slashing resist`}
-        </pre>
+        <div className="body-right-big">
+          your robot name here
+        </div>
       </div>
-      <div className="body-right-big">
-        your robot name here
-      </div>
+      <div className="debug">
+        debug
       </div>
     </div>
     </>
