@@ -1,5 +1,33 @@
 .App {
+  background-color: #111;
+  /* height: 100%;
+  width: 100%; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.title {
   text-align: center;
+  color: #eee;
+  border-bottom: solid #eee
+}
+.body-left-small {
+  color: #eee;
+  height: 100%;
+  width: 30%;
+  background-color: #123456;
+  float: left;
+  border-right: solid #eee;
+}
+.body-right-big {
+  color: #eee;
+  height: 100%;
+  width: 70%;
+  background-color: #654321;
+  float: right;
 }
 
 .App-logo {
