@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/toy-loot-gen/static/css/main.04338375.css",
-    "main.js": "/toy-loot-gen/static/js/main.f71b9244.js",
+    "main.css": "/toy-loot-gen/static/css/main.873da477.css",
+    "main.js": "/toy-loot-gen/static/js/main.58bef63a.js",
     "static/js/787.29493559.chunk.js": "/toy-loot-gen/static/js/787.29493559.chunk.js",
     "index.html": "/toy-loot-gen/index.html",
-    "main.04338375.css.map": "/toy-loot-gen/static/css/main.04338375.css.map",
-    "main.f71b9244.js.map": "/toy-loot-gen/static/js/main.f71b9244.js.map",
+    "main.873da477.css.map": "/toy-loot-gen/static/css/main.873da477.css.map",
+    "main.58bef63a.js.map": "/toy-loot-gen/static/js/main.58bef63a.js.map",
     "787.29493559.chunk.js.map": "/toy-loot-gen/static/js/787.29493559.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.04338375.css",
-    "static/js/main.f71b9244.js"
+    "static/css/main.873da477.css",
+    "static/js/main.58bef63a.js"
   ]
 }
