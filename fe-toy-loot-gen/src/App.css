@@ -65,15 +65,16 @@
   margin-right: 5%;
   height: 80%;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-content: flex-start;
+  overflow-y: scroll;
+  gap: 12px;
 }
 
 .card-in-library-big {
-  margin: auto;
-  height: auto;
   width: 90%;
-  min-height: 48px;
+  margin-left: 5%;
+  min-height: 120px;
   background-color: #343456;
 }
 

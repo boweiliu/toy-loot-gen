@@ -20,6 +20,12 @@ function App() {
             <div className="card-in-library-big">
               sample module here - expanded
             </div>
+            <div className="card-in-library-big">
+              sample module here - expanded
+            </div>
+            <div className="card-in-library-big">
+              sample module here - expanded
+            </div>
           </div>
         </div>
         <div className="body-right-big">
