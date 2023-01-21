@@ -68,13 +68,16 @@
   flex-direction: column;
   align-content: flex-start;
   overflow-y: scroll;
-  gap: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .card-in-library-big {
   width: 90%;
+  margin-bottom: 6px;
+  margin-top: 6px;
   margin-left: 5%;
-  min-height: 120px;
+  min-height: 180px;
   background-color: #343456;
 }
 
