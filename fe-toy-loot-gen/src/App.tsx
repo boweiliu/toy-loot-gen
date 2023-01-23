@@ -29,7 +29,9 @@ function App() {
           </div>
         </div>
         <div className="body-right-big">
-          your robot name here
+            <div className="hull-wrapper">
+              your robot name here
+            </div>
         </div>
       </div>
       <div className="debug">
