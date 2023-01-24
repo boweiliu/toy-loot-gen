@@ -30,7 +30,32 @@ function App() {
         </div>
         <div className="body-right-big">
             <div className="hull-wrapper">
-              your robot name here
+              <div className="hull-title">your robot name here</div>
+              <div className="hull-body">
+                <div className="hull-column">
+                  <div className="hull-column-strut"></div>
+                  <div className="hull-column-container">
+                    <div className="hull-column-item">
+                      one
+                    </div>
+                    <div className="hull-column-item">
+                      one
+                    </div>
+                    <div className="hull-column-item">
+                      one
+                    </div>
+                    <div className="hull-column-item">
+                      one
+                    </div>
+                  </div>
+                </div>
+                <div className="hull-column">
+                </div>
+                <div className="hull-column">
+                </div>
+                <div className="hull-column">
+                </div>
+              </div>
             </div>
         </div>
       </div>
