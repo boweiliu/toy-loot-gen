@@ -1,8 +1,28 @@
 import React from 'react'
-import { DndContext } from '@dnd-kit/core'
+import { DndContext, useDraggable, useDroppable } from '@dnd-kit/core'
 import './App.css'
 
+function Draggable () {
+  const { attributes, listeners, setNodeRef: setNodeRefItem, transform } = useDraggable({
+    id: 'draggable',
+  });
+
+  const style = transform ? ({
+    transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
+  }) : undefined ;
+
+  return (
+    <div ref={setNodeRefItem} style={style} {...listeners} {...attributes} className="card-in-library-big"> sample module here - expanded item 1 </div>
+  )
+}
+
 function App() {
+  const { isOver, setNodeRef } = useDroppable({
+    id: 'droppable'
+  });
+
+
+
   return (
     <>
       <div className="App">
@@ -10,16 +30,15 @@ function App() {
           <div className="title-text">Toy loot gen game</div>
         </div>
         <div className="body">
-          <DndContext>
             <div className="body-left-small">
               Library
               <div className="card-in-library-list">
+                <DndContext>
+                <Draggable />
                 <div className="card-in-library-big">
                   sample module here - expanded
                 </div>
-                <div className="card-in-library-big">
-                  sample module here - expanded
-                </div>
+                </DndContext>
                 <div className="card-in-library-big">
                   sample module here - expanded
                 </div>
@@ -35,7 +54,7 @@ function App() {
                   <div className="hull-column">
                     <div className="hull-column-strut"></div>
                     <div className="hull-column-container">
-                      <div className="hull-column-item">slot 1</div>
+                      <div ref={setNodeRef} className="hull-column-item">{isOver ? 'slot 1' : 'empty'}</div>
                       <div className="hull-column-item">slot 2</div>
                       <div className="hull-column-item">slot 3</div>
                       <div className="hull-column-item">slot 4</div>
@@ -47,7 +66,6 @@ function App() {
                 </div>
               </div>
             </div>
-          </DndContext>
         </div>
         <div className="debug">debug</div>
       </div>
