@@ -1,5 +1,5 @@
 import React from 'react'
-import { DndContext, useDraggable, useDroppable } from '@dnd-kit/core'
+import { DndContext, useDraggable, useDroppable, DragOverlay } from '@dnd-kit/core'
 import './App.css'
 
 function Draggable () {
