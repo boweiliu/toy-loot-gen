@@ -1,4 +1,5 @@
 import React from 'react';
+import { DndContext } from '@dnd-kit/core';
 import './App.css';
 
 function App() {
@@ -12,8 +13,10 @@ function App() {
         </div>
       </div>
       <div className="body">
+        <DndContext>
         <div className="body-left-small">
-          <div className="card-in-library-list">
+          Library
+              <div className="card-in-library-list">
             <div className="card-in-library-big">
               sample module here - expanded
             </div>
@@ -36,16 +39,16 @@ function App() {
                   <div className="hull-column-strut"></div>
                   <div className="hull-column-container">
                     <div className="hull-column-item">
-                      one
+                      slot 1
                     </div>
                     <div className="hull-column-item">
-                      one
+                      slot 2
                     </div>
                     <div className="hull-column-item">
-                      one
+                      slot 3
                     </div>
                     <div className="hull-column-item">
-                      one
+                      slot 4
                     </div>
                   </div>
                 </div>
@@ -58,6 +61,7 @@ function App() {
               </div>
             </div>
         </div>
+        </DndContext>
       </div>
       <div className="debug">
         debug
