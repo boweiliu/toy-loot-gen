@@ -27,7 +27,9 @@ function App() {
     <>
       <div className="appContainer">
         <div className="appTitle">
-          <div className="titleText">Toy loot gen game</div>
+          <div className="headerBarContainer">
+            <div className="titleText">Toy loot gen game</div>
+          </div>
         </div>
         <div className="appBody">
           <Cols>
@@ -46,7 +48,7 @@ const Cols: FC<{ children?: React.ReactNode }> = ({ children }) => {
 }
 
 const Col: FC<{ children?: React.ReactNode }> = ({ children }) => {
-    return (<>{children}</>)
+    return (<div className="colsItem">{children}</div>)
 }
 
 export default App;

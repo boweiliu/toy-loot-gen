@@ -11,15 +11,20 @@
   display: flex;
   flex-direction: column;
 }
-
-.appTitle {
+.appContainer * {
   color: #ddd;
   box-sizing: border-box;
+}
+
+.appTitle {
   border-bottom: solid 2px #ddd;
   min-height: 4%;
   /* max-height: 5%; */
+}
+.headerBarContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 }
 .titleText {
@@ -32,6 +37,20 @@
   display: flex;
   flex-direction: column;
   overflow-wrap: break-word; */
+}
+.colsContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.colsItem {
+    flex: 1;
+    /* background-color: #123456; */
+    border-right: solid 2px #ddd;
+    text-align: center;
+}
+.colsItem:last-child {
+    border-right: none;
 }
 .body-left-small {
   color: #ddd;
