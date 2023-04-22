@@ -1,31 +1,37 @@
-.App {
-  background-color: #111;
-  /* height: 100%;
-  width: 100%; */
+.appContainer {
+  background-color: #232527;
+  height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
 }
 
-.title {
+.appTitle {
   color: #ddd;
   box-sizing: border-box;
-  border-bottom: solid #ddd;
-  height: 3%;
+  border-bottom: solid 2px #ddd;
+  min-height: 4%;
+  /* max-height: 5%; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.title-text {
+.titleText {
 }
-.body {
-  background-color: #8aaaaa;
-  height: 97%;
-  width: 100%;
+.appBody {
+  width: 100%; 
+  flex: 1;
+  /*
+  background-color: #123456;
   display: flex;
-  overflow-wrap: break-word;
+  flex-direction: column;
+  overflow-wrap: break-word; */
 }
 .body-left-small {
   color: #ddd;
