@@ -38,11 +38,7 @@ function App() {
             <Col>
               <Rows>
                 <Row>
-                <Card title='Enemy Info'>
-                  <table>
-                    <tr>blah</tr>
-                  </table>
-                </Card>
+                <EnemyInfoCard />
                 </Row>
                 <Row>
                   ???
@@ -73,6 +69,19 @@ const Row: FC<{ children?: React.ReactNode }> = ({ children }) => {
 }
 const Card: FC<{ children?: React.ReactNode, title: string }> = ({ children, title }) => {
     return (<div><div>{title}</div>{children}</div>);
+}
+
+const EnemyInfoCard = () => {
+
+  return (<>
+      <button style={{ backgroundColor: '#2244aa' }}>Generate enemy</button>
+      <Card title='Enemy Info'>
+        <table style={{ tableLayout: 'auto', width: '100%' }}>
+            <tr><td>blah</td><td>s</td></tr>
+            <tr>blah</tr>
+        </table>
+      </Card>
+  </>);
 }
 
 export default App;
