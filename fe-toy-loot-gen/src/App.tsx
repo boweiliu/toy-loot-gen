@@ -33,9 +33,23 @@ function App() {
         </div>
         <div className="appBody">
           <Cols>
-            <Col>blah</Col>
-            <Col>blah</Col>
-            <Col>blah</Col>
+            <Col>Library</Col>
+            <Col>Equipped</Col>
+            <Col>
+              <Rows>
+                <Row>
+                <Card title='Enemy Info'>
+                  <table>
+                    <tr>blah</tr>
+                  </table>
+                </Card>
+                </Row>
+                <Row>
+                  ???
+       
+                </Row>
+              </Rows>
+            </Col>
           </Cols>
         </div>
       </div>
@@ -49,6 +63,16 @@ const Cols: FC<{ children?: React.ReactNode }> = ({ children }) => {
 
 const Col: FC<{ children?: React.ReactNode }> = ({ children }) => {
     return (<div className="colsItem">{children}</div>)
+}
+
+const Rows: FC<{ children?: React.ReactNode }> = ({ children }) => {
+    return (<div className='rowsContainer'>{children}</div>);
+}
+const Row: FC<{ children?: React.ReactNode }> = ({ children }) => {
+    return (<div className="rowsItem">{children}</div>)
+}
+const Card: FC<{ children?: React.ReactNode, title: string }> = ({ children, title }) => {
+    return (<div><div>{title}</div>{children}</div>);
 }
 
 export default App;
