@@ -68,15 +68,20 @@ const Row: FC<{ children?: React.ReactNode }> = ({ children }) => {
     return (<div className="rowsItem">{children}</div>)
 }
 const Card: FC<{ children?: React.ReactNode, title: string }> = ({ children, title }) => {
-    return (<div><div>{title}</div>{children}</div>);
+    return (<div><div>{title}</div><div style={{ textAlign: 'left', paddingLeft: '12px' }}>{children}</div></div>);
 }
 
 const EnemyInfoCard = () => {
 
   return (<>
-      <button style={{ backgroundColor: '#2244aa' }}>Generate enemy</button>
       <Card title='Enemy Info'>
-        <table style={{ tableLayout: 'auto', width: '100%' }}>
+        <button style={{ backgroundColor: '#2244aa', border: 'solid 0px gray', borderRadius: '6px', width: 'auto', margin: '4px 4px 4px 4px',  padding: '2px 8px 2px 8px', }}>Generate enemy</button>
+        <div style={{ textAlign: 'left' }}>
+          <div>max hp: 10</div>
+          <div>atk 1: 5 plain damage</div>
+          <div>resists: +3 water DEF</div>
+        </div>
+        <table style={{ tableLayout: 'auto', width: '100%', backgroundColor: '#442299' }}>
             <tr><td>blah</td><td>s</td></tr>
             <tr>blah</tr>
         </table>
