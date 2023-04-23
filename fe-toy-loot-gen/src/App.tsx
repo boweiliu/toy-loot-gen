@@ -100,15 +100,27 @@ const EnemyInfoBlock = () => {
             <tr>
               <td><TypetagBubble tag='FIRE'/></td><td style={{ color: '#2d2' }}>+10</td>
             </tr>
+            <tr>
+              <td><TypetagBubble tag='GRAVITON'/></td><td style={{ color: '#2d2' }}>+10</td>
+            </tr>
+            <tr>
+              <td><TypetagBubble tag='QUANTUM'/></td><td style={{ color: '#2d2' }}>+10</td>
+            </tr>
           </table>
           <br />
           <div>Attacks per turn:</div>
           <table style={{ textAlign: 'center' }}>
             <tr>
-              <td><TypetagBubble tag='PLAIN'/></td><td>1 x 2 dmg</td>
+              <td><TypetagBubble tag='RADIATIVE'/></td><td>1 x 2 dmg</td>
             </tr>
             <tr>
-              <td><TypetagBubble tag='LIGHTNING'/></td><td>1 x 3 dmg</td>
+              <td><TypetagBubble tag='KINETIC'/></td><td>1 x 2 dmg</td>
+            </tr>
+            <tr>
+              <td><TypetagBubble tag='ALLOY'/></td><td>1 x 3 dmg</td>
+            </tr>
+            <tr>
+              <td><TypetagBubble tag='EARTH'/></td><td>1 x 3 dmg</td>
             </tr>
           </table>
         </div>
@@ -118,15 +130,29 @@ const EnemyInfoBlock = () => {
 const TypetagBubble = ({tag}: {tag: string}) => {
     let colors: { bubble: string, text: string };
     if (tag === 'PLAIN') {
-        colors = { bubble: '#888888', text: '#000' };
+        colors = { bubble: '#555', text: '#eee' };
     } else if (tag === 'WATER') {
         colors = { bubble: '#09c', text: '#000' };
     } else if (tag === 'WIND') {
         colors = { bubble: '#aaf', text: '#000' };
     } else if (tag === 'FIRE') {
-        colors = { bubble: '#950', text: '#000' };
+        colors = { bubble: '#d60', text: '#000' };
     } else if (tag === 'LIGHTNING') {
         colors = { bubble: '#bb3', text: '#000' };
+    } else if (tag === 'COLD') {
+        colors = { bubble: '#0fc', text: '#000' };
+    } else if (tag === 'KINETIC') {
+        colors = { bubble: '#daa', text: '#000' };
+    } else if (tag === 'RADIATIVE') {
+        colors = { bubble: '#dd0', text: '#000' };
+    } else if (tag === 'EARTH') {
+        colors = { bubble: '#840', text: '#eee' };
+    } else if (tag === 'ALLOY') {
+        colors = { bubble: '#884', text: '#eee' };
+    } else if (tag === 'QUANTUM') {
+        colors = { bubble: '#b0e', text: '#000' };
+    } else if (tag === 'GRAVITON') {
+        colors = { bubble: '#62e', text: '#eee' };
     } else {
         colors = { bubble: '#bbb', text: '#000' };
     }
