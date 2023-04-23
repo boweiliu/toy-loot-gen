@@ -89,21 +89,28 @@ const EnemyInfoBlock = () => {
           <div>Defenses:</div>
           <table style={{ textAlign: 'center' }}>
             <tr>
-              <td><TypetagBubble tag='PLAIN'/></td><td>+2</td>
+              <td><TypetagBubble tag='PLAIN'/></td><td style={{color: '#2d2'}}>+2.5</td>
             </tr>
             <tr>
-              <td><TypetagBubble tag='WATER'/></td><td>-5</td>
+              <td><TypetagBubble tag='WATER'/></td><td style={{color: '#d62'}}>-5</td>
             </tr>
             <tr>
-              <td><TypetagBubble tag='WIND'/></td><td>-10</td>
+              <td><TypetagBubble tag='WIND'/></td><td style={{ color: '#d62' }}>-10</td>
             </tr>
             <tr>
-              <td><TypetagBubble tag='FIRE'/></td><td>+10</td>
+              <td><TypetagBubble tag='FIRE'/></td><td style={{ color: '#2d2' }}>+10</td>
             </tr>
           </table>
           <br />
-          <div>Attacks</div>
-          <div>2 <TypetagBubble tag='PLAIN'/> damage</div>
+          <div>Attacks per turn:</div>
+          <table style={{ textAlign: 'center' }}>
+            <tr>
+              <td><TypetagBubble tag='PLAIN'/></td><td>1 x 2 dmg</td>
+            </tr>
+            <tr>
+              <td><TypetagBubble tag='LIGHTNING'/></td><td>1 x 3 dmg</td>
+            </tr>
+          </table>
         </div>
     </>);
 }
@@ -118,6 +125,8 @@ const TypetagBubble = ({tag}: {tag: string}) => {
         colors = { bubble: '#aaf', text: '#000' };
     } else if (tag === 'FIRE') {
         colors = { bubble: '#950', text: '#000' };
+    } else if (tag === 'LIGHTNING') {
+        colors = { bubble: '#bb3', text: '#000' };
     } else {
         colors = { bubble: '#bbb', text: '#000' };
     }
