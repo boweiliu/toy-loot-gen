@@ -76,17 +76,40 @@ const EnemyInfoCard = () => {
   return (<>
       <Card title='Enemy Info'>
         <button style={{ backgroundColor: '#2244aa', border: 'solid 0px gray', borderRadius: '6px', width: 'auto', margin: '4px 4px 4px 4px',  padding: '2px 8px 2px 8px', }}>Generate enemy</button>
-        <div style={{ textAlign: 'left' }}>
-          <div>max hp: 10</div>
-          <div>atk 1: 5 plain damage</div>
-          <div>resists: +3 water DEF</div>
-        </div>
-        <table style={{ tableLayout: 'auto', width: '100%', backgroundColor: '#442299' }}>
-            <tr><td>blah</td><td>s</td></tr>
-            <tr>blah</tr>
-        </table>
+        <EnemyInfoBlock />
       </Card>
   </>);
+}
+
+const EnemyInfoBlock = () => {
+    return (<>
+        <div>
+          <h2>Placeholder Name</h2>
+          <div>HP: 10</div>
+          <div>Defenses:</div>
+          <table style={{ textAlign: 'center' }}>
+            <tr>
+              <td><TypetagBubble tag='PLAIN'/></td><td>+2</td>
+            </tr>
+            <tr>
+              <td>WATER</td><td>-5</td>
+            </tr>
+            <tr>
+              <td>WIND</td><td>-10</td>
+            </tr>
+            <tr>
+              <td>FIRE</td><td>+10</td>
+            </tr>
+          </table>
+          <br />
+          <div>Attacks</div>
+          <div>2 plain damage</div>
+        </div>
+    </>);
+}
+
+const TypetagBubble = ({tag}: {tag: string}) => {
+    return (<div style={{ color: '#000', backgroundColor: '#bbb', borderRadius: '4px' }}>{tag}</div>)
 }
 
 export default App;
