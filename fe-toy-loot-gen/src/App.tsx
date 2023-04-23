@@ -92,24 +92,37 @@ const EnemyInfoBlock = () => {
               <td><TypetagBubble tag='PLAIN'/></td><td>+2</td>
             </tr>
             <tr>
-              <td>WATER</td><td>-5</td>
+              <td><TypetagBubble tag='WATER'/></td><td>-5</td>
             </tr>
             <tr>
-              <td>WIND</td><td>-10</td>
+              <td><TypetagBubble tag='WIND'/></td><td>-10</td>
             </tr>
             <tr>
-              <td>FIRE</td><td>+10</td>
+              <td><TypetagBubble tag='FIRE'/></td><td>+10</td>
             </tr>
           </table>
           <br />
           <div>Attacks</div>
-          <div>2 plain damage</div>
+          <div>2 <TypetagBubble tag='PLAIN'/> damage</div>
         </div>
     </>);
 }
 
 const TypetagBubble = ({tag}: {tag: string}) => {
-    return (<div style={{ color: '#000', backgroundColor: '#bbb', borderRadius: '4px' }}>{tag}</div>)
+    let colors: { bubble: string, text: string };
+    if (tag === 'PLAIN') {
+        colors = { bubble: '#888888', text: '#000' };
+    } else if (tag === 'WATER') {
+        colors = { bubble: '#09c', text: '#000' };
+    } else if (tag === 'WIND') {
+        colors = { bubble: '#aaf', text: '#000' };
+    } else if (tag === 'FIRE') {
+        colors = { bubble: '#950', text: '#000' };
+    } else {
+        colors = { bubble: '#bbb', text: '#000' };
+    }
+        
+    return (<span style={{ color: colors.text, backgroundColor: colors.bubble, borderRadius: '4px' , padding: '0 4px 0 4px', margin: '0 2px 0 2px' }}>{tag}</span>)
 }
 
 export default App;
